@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="imagenes/favicon.png" type="image/png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./styles/style.css" rel="stylesheet" type="text/css">
+    <title>Citas</title>
+</head>
+
+<body>
+
+    <h1 class="card-title text-center" id="sura">EPS SURA</h1>
+
+    <!--Buscador-->
+    <div>
+        <label class="label">Buscar por nombre</label>
+        <input id="inputBuscar">
+        <button id="btnBuscar">Buscar</button>
+    </div>
+
+    <div id="busqueda"></div>
+
+    <!--Agregar cita-->
+    <div class="card mt-5">
+        <div class="card-body">
+            <form id="formulario">
+                <h1 class="card-title text-center"> Agregar Citas</h1>
+                <hr />
+
+                <div class="orm-group row">
+                    <label class="col-sm-4 col-lg-2 col-form-label">Nombre</label>
+                    <div class="mb-4 mb-lg-0">
+                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" autoComplete="off" />
+                    </div>
+                </div>
+
+                <div class="form-group row mt-3">
+                    <label class="col-sm-4 col-lg-2 col-form-label">Fecha</label>
+                    <div class="form-group col-sm-8 col-lg-4">
+                        <input type="date" id="fecha" name="fecha" class="form-control" autoComplete="off" />
+                    </div>
+
+                    <label class="col-sm-4 col-lg-2 col-form-label">hora</label>
+                    <div class="form-group col-sm-8 col-lg-4">
+                        <input type="time" id="hora" name="hora" class="form-control" autoComplete="off" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-lg-2 col-form-label">Sintomas</label>
+                    <div class="form-group">
+                        <textarea id="sintomas" name="sintomas" class="form-control" autoComplete="off"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Guardar
+                </button>
+
+                <button type="click" id="limpiar" class="btn btn-primary">
+                    limpiar
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <!--Listar citas-->
+    <div class="card mt-5" id="listar">
+        <div>
+            <h2 class="card-title text-center">Agenda</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Síntomas</th>
+                        <th>Acción</th>
+                    </tr>
+                    <tbody id="listarCita"></tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+    </div>
+
+
+
+    <script src="../script/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+
+
+
+
+
+</html>
